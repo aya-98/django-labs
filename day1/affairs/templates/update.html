@@ -1,0 +1,32 @@
+<html>
+    
+    <body>
+
+{%extends 'home.html' %}
+{%block content%}
+
+<form class='container my-5 mx-5' method="POST">
+    {%csrf_token%}
+
+    <div class="mb-3">
+      <label  class="form-label"> User name </label>
+      <input type="text" class="form-control" name="uname" value={{stud.name}} >
+      
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">  Email </label>
+      <input type="email" class="form-control" name="mail" value={{stud.mail}}>
+    </div>
+    
+      <div class="mb-3">
+        <label  class="form-label">  Address </label>
+        <input type="text" class="form-control" name="address" value={{stud.address}}>
+    
+
+<div class='d-flex justify-content-center mt-4'>
+<input type='submit' value='Update Student' class='btn-lg btn-info'>
+</div>
+</form>
+{%endblock%}
+</body>
+</html>

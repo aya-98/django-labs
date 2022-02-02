@@ -1,0 +1,41 @@
+
+
+<html>
+    
+    <body>
+        {%extends 'home.html' %}
+        {%block content %}
+        <table class='table container my-5 mx-5'  >
+            <thead>
+            <tr>
+                <th> ID </th>
+                <th> Name </th>
+                <th> Email </th>
+                <th> Address </th>
+                <th> Birth-Date </th>
+                <th> Actions </th>
+                <th> Actions </th>
+            </tr>
+          </thead>
+          <tbody>
+
+              {%for stud in studs%}
+              <tr>
+                  <td>{{stud.id}}</td>
+                   <td> {{stud.name}}</td>
+                  <td> {{stud.mail}}</td>
+                  <td> {{stud.address}}</td>
+                  <td>{{stud.bdate}}</td>
+                  <td> <a href='/delete/{{stud.id}}' >  Delete </a> </td>
+                  <td> <a href='/update/{{stud.id}}'>  Update </a> </td>
+ 
+                  
+
+              </tr>
+              {%endfor%}
+          </tbody>
+        </table>
+
+     {%endblock%}
+    </body>
+</html>
