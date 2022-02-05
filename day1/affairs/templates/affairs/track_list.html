@@ -1,0 +1,15 @@
+<html>
+    
+    <body>
+        {%extends 'home.html' %}
+        {%block content%}
+        <h3 class='text-center mt-5 text-danger'> Tracks  </h3>
+        <ul class='list-group  mt-3' >
+        {%for t in object_list %}
+        <li class='list-group-item text-center' > {{t.name}}  </li>
+
+        {%endfor%}
+      </ul>
+          {%endblock%}
+    </body>
+    </html>

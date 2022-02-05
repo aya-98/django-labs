@@ -1,11 +1,12 @@
 from django.db import models
 
-class studnent(models.Model):
+class student(models.Model):
     id=models.AutoField(primary_key=True)
     name=models.CharField(max_length=30)
     mail=models.EmailField()
     bdate=models.DateField()
     address=models.CharField(max_length=40)
+    track= models.ForeignKey('track' , on_delete=models.CASCADE )
 
 class track(models.Model):
     name = models.CharField(max_length=20)

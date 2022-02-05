@@ -1,0 +1,15 @@
+<html>
+    
+    <body>
+        {%extends 'home.html' %}
+        {%block content%}
+        <form method='POST' action='/insert-track/'>
+            {%csrf_token%} 
+            {{form}}
+            <input type='submit' value='Create Track ' > 
+
+        </form>
+
+        {%endblock%}
+    </body>
+    </html>

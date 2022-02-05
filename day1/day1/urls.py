@@ -24,11 +24,17 @@ urlpatterns = [
     
     path('' , login , name='login') ,
     path('register/' , register , name='register') ,
-    path('insert/' ,insert_stud ),
+    path('insert1/' ,insert1 ),
+    path('insert2/' ,insert2 ),
     path('select/' , select_stud ,name='Select') ,
     path('search/' ,search_stud),
     path('delete/<id>' , del_stud),
-    path('update/<id>' ,update)  ,
+    path('update1/<id>' ,update1.as_view())  ,
+    path('update2/<id>' ,update2.as_view())  ,
+    path('list-tracks-generic/' ,trackList.as_view()) ,
+    path('track-form/' ,trackCreate.as_view()) ,
+    path('insert-track/' ,insert_track ),
+    
     path('logout/' , mylogout)
 
 
