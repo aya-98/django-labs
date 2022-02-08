@@ -16,7 +16,7 @@ Including another URLconf
 from lib2to3.pgen2.token import NAME
 from unicodedata import name
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , include
 from app1.views import navbar , home , contact , about , view_info ,login , register
 from affairs.views import *
 urlpatterns = [
@@ -34,7 +34,7 @@ urlpatterns = [
     path('list-tracks-generic/' ,trackList.as_view()) ,
     path('track-form/' ,trackCreate.as_view()) ,
     path('insert-track/' ,insert_track ),
-    
+    path('myapi/' , include('myapi.urls')) ,
     path('logout/' , mylogout)
 
 

@@ -6,7 +6,7 @@ class student(models.Model):
     mail=models.EmailField()
     bdate=models.DateField()
     address=models.CharField(max_length=40)
-    track= models.ForeignKey('track' , on_delete=models.CASCADE )
+    track= models.ForeignKey('track' , on_delete=models.CASCADE  , null=True )
 
 class track(models.Model):
     name = models.CharField(max_length=20)
